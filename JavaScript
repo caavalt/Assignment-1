@@ -1,0 +1,24 @@
+var map = L.map("map").setView([38.623541, -90.186193], 11);
+
+// load a tile layer
+//https://a.tile.openstreetmap.org/{z}/{x}/{y}.png
+//'http://a.tile.stamen.com/toner/{z}/{x}/{y}.png'
+//https://wiki.openstreetmap.org/wiki/Tile_servers
+L.tileLayer("https://a.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "Map tiles by Stamen Design, under CC BY 3.0.",
+  maxZoom: 18
+}).addTo(map);
+
+var marker1 = L.marker([38.633424, -90.200076]).addTo(map);
+var marker2 = L.marker([38.615569, -90.258957]).addTo(map);
+var marker3 = L.marker([38.626951, -90.207577]).addTo(map);
+var marker4 = L.marker([38.642042, -90.254782]).addTo(map);
+var marker5 = L.marker([38.634443, -90.290305]).addTo(map);
+
+marker1.bindPopup("<b>Museum 1</b><br>City Museum").openPopup();
+marker2.bindPopup("<b>Garden</b><br>Missouri Botanical Garden").openPopup();
+marker3.bindPopup("<b>Museum 2</b><br>Union Station").openPopup();
+marker4
+  .bindPopup("<b>Religious Establishment</b><br>Cathedral Basilica")
+  .openPopup();
+marker5.bindPopup("<b>Museum 3</b><br>Saint Louis Zoo").openPopup();
